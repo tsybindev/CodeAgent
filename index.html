@@ -3,25 +3,226 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Тестовая страница</title>
-  <link rel="stylesheet" href="style.css">
+  <title>AI Development Pipeline — Автоматизация создания Merge Request</title>
+
+  <!-- Preconnect for OnlineWebFonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- BubbledotICG-FinePos Display Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bubbledot+ICG+FinePos&display=swap" rel="stylesheet">
+
+  <!-- Inter UI Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.5.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Geist Pixel Circle Fallback -->
+  <style>
+    @font-face {
+      font-family: 'Geist Pixel Circle';
+      src: local('Geist Pixel Circle');
+      font-weight: 400;
+      font-display: fallback;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Тестовая страница</h1>
+
+  <!-- Header Region -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="AI Development Pipeline">
+        <span class="logo-mark" aria-hidden="true">AI</span>
+        <span class="logo-text">Dev Pipeline</span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#product" class="nav-link">Product</a></li>
+          <li><a href="#cases" class="nav-link">Case Studies</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="burger-btn" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+        <span class="burger-icon" aria-hidden="true"></span>
+      </button>
+    </div>
   </header>
-  <main>
-    <section id="main">
-      <h2>Главная</h2>
-      <p>Тестовая страница</p>
-    </section>
-    <section id="contacts">
-      <h2>Контакты</h2>
-      <div class="contact-block">
-        <p>Email: example@example.com</p>
-        <p>Телефон: +7 (000) 000-00-00</p>
+
+  <!-- Hero Region -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <!-- Background image placeholder (replaces video) -->
+      <img src="assets/hero-bg.png" alt="" class="hero-bg-img" loading="eager" onerror="this.style.display='none'">
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-headline headline-fade">
+        AI Development Pipeline
+      </h1>
+      <p class="hero-subhead headline-fade" style="animation-delay: 0.2s">
+        Преобразуем бизнес-задачу в готовый Merge Request через автоматизированный AI-воркфлоу.
+      </p>
+      <div class="hero-cta headline-fade" style="animation-delay: 0.4s">
+        <a href="#" class="cta-button">Get Started</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span class="scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- Stats Footer Region -->
+  <footer class="stats-footer" role="contentinfo">
+    <div class="stats-grid">
+      <div class="stat-item reveal" style="transition-delay: 0s">
+        <span class="stat-number">6</span>
+        <span class="stat-label">Стадии автоматизации</span>
+      </div>
+      <div class="stat-item reveal" style="transition-delay: 0.1s">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Платформы интеграции</span>
+      </div>
+      <div class="stat-item reveal" style="transition-delay: 0.2s">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Автоматизация MR</span>
+      </div>
+    </div>
+
+    <!-- Product Section -->
+    <section class="product-section" id="product">
+      <div class="container">
+        <h2 class="section-title reveal">Возможности AI Development Pipeline</h2>
+        <p class="section-desc reveal" style="transition-delay: 0.1s">
+          Полный цикл автоматизации: от формулировки задачи до создания Merge Request.
+        </p>
+        <div class="features-grid">
+          <article class="feature-card reveal" style="transition-delay: 0s">
+            <div class="feature-icon" aria-hidden="true"><i class="fas fa-bullseye"></i></div>
+            <h3>Clarifier — Уточнение требований</h3>
+            <p>Автоматическое уточнение бизнес-задачи, приведение к формализованному формату и проверка полноты входных данных перед началом обработки.</p>
+          </article>
+          <article class="feature-card reveal" style="transition-delay: 0.1s">
+            <div class="feature-icon" aria-hidden="true"><i class="fas fa-microscope"></i></div>
+            <h3>Research — Исследование кода</h3>
+            <p>Глубокий анализ существующего кодовой базы: зависимости, архитектурные паттерны, потенциальные риски и области для улучшения.</p>
+          </article>
+          <article class="feature-card reveal" style="transition-delay: 0.2s">
+            <div class="feature-icon" aria-hidden="true"><i class="fas fa-sitemap"></i></div>
+            <h3>Plan — Планирование</h3>
+            <p>Формирование детального плана реализации с разбивкой на задачи, оценкой объёма работ и определением приоритетов.</p>
+          </article>
+          <article class="feature-card reveal" style="transition-delay: 0.3s">
+            <div class="feature-icon" aria-hidden="true"><i class="fas fa-code"></i></div>
+            <h3>Execute — Реализация</h3>
+            <p>Автоматическая генерация кода на основе утверждённого плана с соблюдением стандартов проекта и существующих архитектурных решений.</p>
+          </article>
+          <article class="feature-card reveal" style="transition-delay: 0.4s">
+            <div class="feature-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></div>
+            <h3>Verify — Верификация</h3>
+            <p>Автоматическое тестирование, проверка качества кода и валидация соответствия требованиям перед финальным этапом.</p>
+          </article>
+          <article class="feature-card reveal" style="transition-delay: 0.5s">
+            <div class="feature-icon" aria-hidden="true"><i class="fas fa-code-branch"></i></div>
+            <h3>Commit & MR — Коммит и создание Merge Request</h3>
+            <p>Финальный этап: автоматический коммит изменений, создание ветки и генерация готового Merge Request с полным описанием.</p>
+          </article>
+        </div>
       </div>
     </section>
-  </main>
+
+    <!-- Integration Section -->
+    <section class="integration-section" id="integration">
+      <div class="container">
+        <h2 class="section-title reveal">Интеграция</h2>
+        <p class="section-desc reveal" style="transition-delay: 0.1s">
+          AI Development Pipeline бесшовно интегрируется с вашими инструментами:
+        </p>
+        <div class="integration-logos">
+          <div class="integration-brand reveal" style="transition-delay: 0s">
+            <i class="fas fa-cube" aria-hidden="true"></i>
+            <span>Kaneo</span>
+          </div>
+          <div class="integration-brand reveal" style="transition-delay: 0.1s">
+            <i class="fab fa-gitlab" aria-hidden="true"></i>
+            <span>GitLab</span>
+          </div>
+          <div class="integration-brand reveal" style="transition-delay: 0.2s">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span>GitHub</span>
+          </div>
+        </div>
+        <p class="integration-note reveal" style="transition-delay: 0.3s">
+          AI Development Pipeline описывает возможности интеграции с Kaneo как трекером задач, GitLab и GitHub как платформами для управления репозиториями и создания Merge Requests.
+        </p>
+      </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="cases-section" id="cases">
+      <div class="container">
+        <h2 class="section-title reveal">Case Studies</h2>
+        <p class="section-desc reveal" style="transition-delay: 0.1s">
+          Примеры применения AI Development Pipeline для автоматизации разработки.
+        </p>
+        <div class="cases-grid">
+          <article class="case-card reveal" style="transition-delay: 0s">
+            <h3>Автоматизация фичевых задач</h3>
+            <p>Команда разработчиков сократила время от постановки задачи до создания MR на 70% благодаря автоматическому уточнению и генерации кода.</p>
+            <span class="case-tag">Скорость</span>
+          </article>
+          <article class="case-card reveal" style="transition-delay: 0.1s">
+            <h3>Масштабирование команды на 300%</h3>
+            <p>Благодаря AI-воркфлоу, команда смогла обрабатывать втрое больше задач без увеличения числа разработчиков, обеспечивая единое качество кода.</p>
+            <span class="case-tag">Масштабируемость</span>
+          </article>
+          <article class="case-card reveal" style="transition-delay: 0.2s">
+            <h3>Снижение количества ошибок в MR</h3>
+            <p>Верификация и автоматическое тестирование позволили сократить количество рецензий на 60%, повысив качество каждого Merge Request.</p>
+            <span class="case-tag">Качество</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <h2 class="section-title reveal">Contact</h2>
+        <p class="section-desc reveal" style="transition-delay: 0.1s">
+          Свяжитесь с нами, чтобы узнать больше о возможностях AI Development Pipeline.
+        </p>
+        <div class="contact-content">
+          <div class="contact-info reveal" style="transition-delay: 0s">
+            <p>Готовы автоматизировать ваш workflow? Оставьте заявку и мы свяжемся с вами.</p>
+            <address>
+              <a href="mailto:hello@aidevpipeline.dev" class="contact-email"><i class="fas fa-envelope" aria-hidden="true"></i> hello@aidevpipeline.dev</a>
+            </address>
+          </div>
+          <div class="contact-cta reveal" style="transition-delay: 0.2s">
+            <a href="#" class="cta-button secondary">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="trust-text">© 2025 AI Development Pipeline. Все права защищены.</p>
+        <div class="footer-links">
+          <a href="#" class="footer-link" aria-label="Privacy Policy">Privacy Policy</a>
+          <a href="#" class="footer-link" aria-label="Terms of Service">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="assets/script.js"></script>
 </body>
 </html>
