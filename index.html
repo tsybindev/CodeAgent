@@ -1,225 +1,105 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coding Agent — Интеллектуальная платформа автоматизации</title>
+  <title>Intelligence Designed To Evolve</title>
+  <meta name="description" content="Coding Agent (COD) — AI Development Pipeline: Dispatcher, Agent Worker and Clarifier subsystems automate software development with measurable velocity impact.">
+  <!-- UI font: Inter (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Display font: BubbledotICG-FinePos (OnlineWebFonts CDN) -->
+  <link href="https://db.onlinewebfonts.com/c/bubbledoticg-finepos?family=BubbledotICG-FinePos" rel="stylesheet">
+  <!-- Icons: Font Awesome 6.5.2 (cdnjs) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <div class="logo">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-          <rect width="48" height="48" rx="12" fill="#6C5CE7"/>
-          <path d="M14 14L24 8L34 14V22L24 34L14 22V14Z" stroke="white" stroke-width="2" fill="none"/>
-          <circle cx="24" cy="21" r="3" fill="white"/>
-          <path d="M18 30L24 34L30 30" stroke="white" stroke-width="2" fill="none"/>
-        </svg>
-        <span>Coding Agent</span>
-      </div>
-      <h1>Интеллектуальная платформа автоматизации кода</h1>
-      <p class="hero-subtitle">COD объединяет скорость выполнения задач, аналитику проектов и управление ресурсами в одном инструменте.</p>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">2,400+</span>
-          <span class="stat-label">Задач выполнено</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">98.7%</span>
-          <span class="stat-label">Успешность</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">150+</span>
-          <span class="stat-label">Проектов</span>
-        </div>
-      </div>
-    </div>
-  </header>
+  <!-- Full-viewport video background -->
+  <div class="video-wrap" aria-hidden="true">
+    <video class="video-bg" autoplay muted loop playsinline preload="auto" poster="assets/hero-bg.png">
+      <source src="https://d2v8x7u3k9.cloudfront.net/hero-background.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
 
-  <main>
-    <section id="features" class="section">
-      <h2>Возможности платформы</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>Скорость выполнения</h3>
-          <p>Автоматизируйте рутинные задачи с ускорением до 10x. Система обрабатывает задачи в очереди с приоритизацией и распределением по ресурсам.</p>
+  <div class="page">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="#" aria-label="Coding Agent home">
+          <img class="logo-img" src="assets/logo.webp" alt="Coding Agent logo" width="36" height="36" onerror="this.onerror=null;this.src='assets/hero-bg.png';">
+          <span class="logo-text">Coding Agent</span>
+        </a>
+        <nav class="main-nav" id="mainNav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="#">Home</a></li>
+            <li><a class="nav-link" href="#product">Product</a></li>
+            <li><a class="nav-link" href="#cases">Case Studies</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <a class="btn-signin" href="#signin">Sign In</a>
+        </nav>
+        <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </header>
+    <div class="nav-overlay" id="navOverlay" hidden></div>
+
+    <!-- Hero -->
+    <main class="hero" id="product">
+      <div class="hero-inner">
+        <div class="trust-row reveal">
+          <span class="avatars" aria-hidden="true">
+            <span class="avatar avatar-ms" title="Microsoft"><i class="fa-brands fa-microsoft"></i></span>
+            <span class="avatar avatar-amz" title="Amazon"><i class="fa-brands fa-amazon"></i></span>
+            <span class="avatar avatar-go" title="Google"><i class="fa-brands fa-google"></i></span>
+          </span>
+          <span class="trust-pill"><i class="fa-solid fa-shield-halved"></i>Trusted by 2000+ Enterprises</span>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3>Аналитика проектов</h3>
-          <p>Визуализируйте прогресс всех проектов в реальном времени. Детальная статистика по каждому проекту поможет принимать обоснованные решения.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔄</div>
-          <h3>Управление ресурсами</h3>
-          <p>Контролируйте загрузку серверов и распределение вычислительных мощностей. Оптимизируйте затраты на инфраструктуру.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🛡️</div>
-          <h3>Безопасность</h3>
-          <p>Многоуровневая защита данных и шифрование при передаче. Соответствие стандартам безопасности для корпоративного использования.</p>
+
+        <h1 class="headline">
+          <span class="headline-line headline-1">Intelligence</span>
+          <span class="headline-line headline-2">Designed To Evolve</span>
+        </h1>
+
+        <!-- PRD-based copy: AI Development Pipeline (Dispatcher / Agent Worker / Clarifier) -->
+        <p class="subhead reveal">The AI Development Pipeline that turns specs into shipped code — Dispatcher routes work, Agent Workers build autonomously, Clarifier resolves ambiguity. Measurable velocity gains for enterprise teams.</p>
+
+        <div class="cta-row revealPulse">
+          <a class="btn-cta" href="#contact">Get Started<i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
-    </section>
 
-    <section id="metrics" class="section">
-      <h2>Метрики производительности</h2>
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <h3>Скорость выполнения задач</h3>
-          <div class="chart-container">
-            <svg class="bar-chart" viewBox="0 0 400 200" width="100%" height="200">
-              <rect x="40" y="140" width="30" height="60" rx="4" fill="#6C5CE7"/>
-              <rect x="90" y="120" width="30" height="80" rx="4" fill="#6C5CE7"/>
-              <rect x="140" y="100" width="30" height="100" rx="4" fill="#6C5CE7"/>
-              <rect x="190" y="80" width="30" height="120" rx="4" fill="#A29BFE"/>
-              <rect x="240" y="60" width="30" height="140" rx="4" fill="#A29BFE"/>
-              <rect x="290" y="40" width="30" height="160" rx="4" fill="#6C5CE7"/>
-              <line x1="30" y1="150" x2="370" y2="150" stroke="#ddd" stroke-width="1"/>
-              <text x="55" y="165" text-anchor="middle" font-size="10" fill="#666">Пн</text>
-              <text x="105" y="165" text-anchor="middle" font-size="10" fill="#666">Вт</text>
-              <text x="155" y="165" text-anchor="middle" font-size="10" fill="#666">Ср</text>
-              <text x="205" y="165" text-anchor="middle" font-size="10" fill="#666">Чт</text>
-              <text x="255" y="165" text-anchor="middle" font-size="10" fill="#666">Пт</text>
-              <text x="305" y="165" text-anchor="middle" font-size="10" fill="#666">Сб</text>
-            </svg>
+      <!-- Stats footer -->
+      <footer class="stats" id="cases">
+        <dl class="stats-grid">
+          <div class="stat reveal">
+            <dt class="stat-label">Inference Time</dt>
+            <dd class="stat-value"><span class="count" data-target="120" data-decimals="0" data-suffix="ms">120ms</span></dd>
           </div>
-          <p class="metric-desc">Среднее время выполнения: <strong>4.2 мин</strong></p>
-        </div>
-        <div class="metric-card">
-          <h3>Статистика по проектам</h3>
-          <div class="chart-container">
-            <svg class="donut-chart" viewBox="0 0 200 200" width="100%" height="200">
-              <circle cx="100" cy="100" r="70" fill="none" stroke="#E8E8E8" stroke-width="25"/>
-              <circle cx="100" cy="100" r="70" fill="none" stroke="#6C5CE7" stroke-width="25" stroke-dasharray="131.95 287.28" stroke-dashoffset="0" transform="rotate(-90 100 100)"/>
-              <circle cx="100" cy="100" r="70" fill="none" stroke="#00CEC9" stroke-width="25" stroke-dasharray="75.4 343.83" stroke-dashoffset="-131.95" transform="rotate(-90 100 100)"/>
-              <circle cx="100" cy="100" r="70" fill="none" stroke="#FD79A8" stroke-width="25" stroke-dasharray="53.4 365.6" stroke-dashoffset="-207.35" transform="rotate(-90 100 100)"/>
-              <circle cx="100" cy="100" r="70" fill="none" stroke="#FDCB6E" stroke-width="25" stroke-dasharray="37.7 381.3" stroke-dashoffset="-260.75" transform="rotate(-90 100 100)"/>
-              <text x="100" y="95" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">4</text>
-              <text x="100" y="115" text-anchor="middle" font-size="11" fill="#666">активных</text>
-            </svg>
+          <div class="stat reveal">
+            <dt class="stat-label">Platform Uptime</dt>
+            <dd class="stat-value"><span class="count" data-target="99.99" data-decimals="2" data-suffix="%">99.99%</span></dd>
           </div>
-          <div class="legend">
-            <span class="legend-item"><span class="dot" style="background:#6C5CE7"></span> Разработка (46%)</span>
-            <span class="legend-item"><span class="dot" style="background:#00CEC9"></span> Тестирование (26%)</span>
-            <span class="legend-item"><span class="dot" style="background:#FD79A8"></span> Дизайн (19%)</span>
-            <span class="legend-item"><span class="dot" style="background:#FDCB6E"></span> Документация (13%)</span>
+          <div class="stat reveal">
+            <dt class="stat-label">Autonomous Runtime</dt>
+            <dd class="stat-value"><span class="count-static">24/7</span></dd>
           </div>
-        </div>
-        <div class="metric-card">
-          <h3>Использование ресурсов</h3>
-          <div class="chart-container">
-            <svg class="line-chart" viewBox="0 0 400 200" width="100%" height="200">
-              <defs>
-                <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#6C5CE7" stop-opacity="0.3"/>
-                  <stop offset="100%" stop-color="#6C5CE7" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <path d="M20 160 L80 120 L140 130 L200 80 L260 90 L320 40 L380 50 L380 200 L20 200 Z" fill="url(#areaGrad)"/>
-              <polyline points="20,160 80,120 140,130 200,80 260,90 320,40 380,50" fill="none" stroke="#6C5CE7" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="20" cy="160" r="4" fill="#6C5CE7"/>
-              <circle cx="80" cy="120" r="4" fill="#6C5CE7"/>
-              <circle cx="140" cy="130" r="4" fill="#6C5CE7"/>
-              <circle cx="200" cy="80" r="4" fill="#6C5CE7"/>
-              <circle cx="260" cy="90" r="4" fill="#6C5CE7"/>
-              <circle cx="320" cy="40" r="4" fill="#6C5CE7"/>
-              <circle cx="380" cy="50" r="4" fill="#6C5CE7"/>
-              <line x1="20" y1="180" x2="380" y2="180" stroke="#eee" stroke-width="1" stroke-dasharray="4,4"/>
-              <text x="2" y="195" font-size="10" fill="#999">Низкий</text>
-              <text x="280" y="195" font-size="10" fill="#999">Высокий</text>
-            </svg>
+          <div class="stat reveal">
+            <dt class="stat-label">Context Windows</dt>
+            <dd class="stat-value"><span class="count" data-target="2.4" data-decimals="1" data-suffix="M">2.4M</span></dd>
           </div>
-          <p class="metric-desc">Текущая загрузка: <strong>72%</strong> | Пик: <strong>95%</strong></p>
-        </div>
-      </div>
-    </section>
+        </dl>
+        <span id="contact" class="contact-anchor" aria-hidden="true"></span>
+      </footer>
+    </main>
+  </div>
 
-    <section id="about" class="section">
-      <h2>О проекте COD</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p><strong>Coding Agent (COD)</strong> — это下一代 платформа для автоматизации разработки, созданная для команд, которые стремятся к максимальной продуктивности. Проект был запущен в 2024 году и уже показал значительные результаты в оптимизации рабочих процессов.</p>
-          <p>Основная миссия COD — избавиться от рутинных задач и дать разработчикам возможность сосредоточиться на творческой и стратегической работе. Платформа использует передовые алгоритмы для распределения задач, мониторинга производительности и прогнозирования узких мест.</p>
-          <div class="about-stats">
-            <div class="mini-stat">
-              <span class="mini-stat-number">3 года</span>
-              <span class="mini-stat-label">на рынке</span>
-            </div>
-            <div class="mini-stat">
-              <span class="mini-stat-number">50+</span>
-              <span class="mini-stat-label">интеграций</span>
-            </div>
-            <div class="mini-stat">
-              <span class="mini-stat-number">24/7</span>
-              <span class="mini-stat-label">поддержка</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-image">
-          <svg viewBox="0 0 300 200" width="100%" height="200">
-            <rect width="300" height="200" rx="16" fill="url(#grad1)"/>
-            <defs>
-              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#6C5CE7"/>
-                <stop offset="100%" style="stop-color:#00CEC9"/>
-              </linearGradient>
-            </defs>
-            <rect x="30" y="30" width="240" height="140" rx="8" fill="white" opacity="0.1"/>
-            <circle cx="80" cy="80" r="20" fill="white" opacity="0.2"/>
-            <circle cx="150" cy="100" r="25" fill="white" opacity="0.2"/>
-            <circle cx="220" cy="75" r="18" fill="white" opacity="0.2"/>
-            <rect x="60" y="130" width="180" height="6" rx="3" fill="white" opacity="0.3"/>
-            <rect x="60" y="145" width="120" height="6" rx="3" fill="white" opacity="0.3"/>
-            <text x="150" y="180" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Coding Agent Platform</text>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <section id="testimonials" class="section">
-      <h2>Отзывы пользователей</h2>
-      <div class="testimonials-grid">
-        <blockquote class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>«COD полностью изменил наш рабочий процесс. Задачи, которые занимали дни, теперь выполняются за часы. Рекомендую каждой команде разработки.»</p>
-          <cite>— Алексей Петров, TechCorp</cite>
-        </blockquote>
-        <blockquote class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>«Визуализация метрик в COD — это то, чего мне не хватало в других инструментах. Теперь мы видим полную картину производительности.»</p>
-          <cite>— Мария Сидорова, DevLab</cite>
-        </blockquote>
-        <blockquote class="testimonial">
-          <div class="stars">★★★★★</div>
-          <p>«Интеграция с нашими existing системами прошла безболезненно. Поддержка на высшем уровне. COD — наш надёжный партнёр.»</p>
-          <cite>— Дмитрий Козлов, DataFlow</cite>
-        </blockquote>
-      </div>
-    </section>
-
-    <section id="cta" class="section cta-section">
-      <h2>Готовы начать?</h2>
-      <p>Присоединяйтесь к более чем 2400 команд, которые уже используют COD для автоматизации своих процессов.</p>
-      <button class="cta-button">Начать бесплатно</button>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo">
-        <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
-          <rect width="48" height="48" rx="12" fill="#6C5CE7"/>
-          <path d="M14 14L24 8L34 14V22L24 34L14 22V14Z" stroke="white" stroke-width="2" fill="none"/>
-          <circle cx="24" cy="21" r="3" fill="white"/>
-        </svg>
-        <span>Coding Agent</span>
-      </div>
-      <p class="footer-copy">© 2024 Coding Agent. Все права защищены.</p>
-    </div>
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
