@@ -3,226 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Development Pipeline — Автоматизация создания Merge Request</title>
-
-  <!-- Preconnect for OnlineWebFonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- BubbledotICG-FinePos Display Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Bubbledot+ICG+FinePos&display=swap" rel="stylesheet">
-
-  <!-- Inter UI Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome 6.5.2 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/style.css">
-
-  <!-- Geist Pixel Circle Fallback -->
-  <style>
-    @font-face {
-      font-family: 'Geist Pixel Circle';
-      src: local('Geist Pixel Circle');
-      font-weight: 400;
-      font-display: fallback;
-    }
-  </style>
+  <title>Coding Agent — Интеллектуальная платформа автоматизации</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Header Region -->
-  <header class="site-header" role="banner">
-    <div class="header-inner">
-      <a href="#" class="logo" aria-label="AI Development Pipeline">
-        <span class="logo-mark" aria-hidden="true">AI</span>
-        <span class="logo-text">Dev Pipeline</span>
-      </a>
-      <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
-        <ul class="nav-list">
-          <li><a href="#product" class="nav-link">Product</a></li>
-          <li><a href="#cases" class="nav-link">Case Studies</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="burger-btn" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
-        <span class="burger-icon" aria-hidden="true"></span>
-      </button>
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="logo">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <rect width="48" height="48" rx="12" fill="#6C5CE7"/>
+          <path d="M14 14L24 8L34 14V22L24 34L14 22V14Z" stroke="white" stroke-width="2" fill="none"/>
+          <circle cx="24" cy="21" r="3" fill="white"/>
+          <path d="M18 30L24 34L30 30" stroke="white" stroke-width="2" fill="none"/>
+        </svg>
+        <span>Coding Agent</span>
+      </div>
+      <h1>Интеллектуальная платформа автоматизации кода</h1>
+      <p class="hero-subtitle">COD объединяет скорость выполнения задач, аналитику проектов и управление ресурсами в одном инструменте.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">2,400+</span>
+          <span class="stat-label">Задач выполнено</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">98.7%</span>
+          <span class="stat-label">Успешность</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Проектов</span>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Region -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <!-- Background image placeholder (replaces video) -->
-      <img src="assets/hero-bg.png" alt="" class="hero-bg-img" loading="eager" onerror="this.style.display='none'">
-      <div class="hero-bg-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <h1 class="hero-headline headline-fade">
-        AI Development Pipeline
-      </h1>
-      <p class="hero-subhead headline-fade" style="animation-delay: 0.2s">
-        Преобразуем бизнес-задачу в готовый Merge Request через автоматизированный AI-воркфлоу.
-      </p>
-      <div class="hero-cta headline-fade" style="animation-delay: 0.4s">
-        <a href="#" class="cta-button">Get Started</a>
-      </div>
-    </div>
-    <div class="hero-scroll-hint" aria-hidden="true">
-      <span class="scroll-line"></span>
-    </div>
-  </section>
-
-  <!-- Stats Footer Region -->
-  <footer class="stats-footer" role="contentinfo">
-    <div class="stats-grid">
-      <div class="stat-item reveal" style="transition-delay: 0s">
-        <span class="stat-number">6</span>
-        <span class="stat-label">Стадии автоматизации</span>
-      </div>
-      <div class="stat-item reveal" style="transition-delay: 0.1s">
-        <span class="stat-number">3</span>
-        <span class="stat-label">Платформы интеграции</span>
-      </div>
-      <div class="stat-item reveal" style="transition-delay: 0.2s">
-        <span class="stat-number">100%</span>
-        <span class="stat-label">Автоматизация MR</span>
-      </div>
-    </div>
-
-    <!-- Product Section -->
-    <section class="product-section" id="product">
-      <div class="container">
-        <h2 class="section-title reveal">Возможности AI Development Pipeline</h2>
-        <p class="section-desc reveal" style="transition-delay: 0.1s">
-          Полный цикл автоматизации: от формулировки задачи до создания Merge Request.
-        </p>
-        <div class="features-grid">
-          <article class="feature-card reveal" style="transition-delay: 0s">
-            <div class="feature-icon" aria-hidden="true"><i class="fas fa-bullseye"></i></div>
-            <h3>Clarifier — Уточнение требований</h3>
-            <p>Автоматическое уточнение бизнес-задачи, приведение к формализованному формату и проверка полноты входных данных перед началом обработки.</p>
-          </article>
-          <article class="feature-card reveal" style="transition-delay: 0.1s">
-            <div class="feature-icon" aria-hidden="true"><i class="fas fa-microscope"></i></div>
-            <h3>Research — Исследование кода</h3>
-            <p>Глубокий анализ существующего кодовой базы: зависимости, архитектурные паттерны, потенциальные риски и области для улучшения.</p>
-          </article>
-          <article class="feature-card reveal" style="transition-delay: 0.2s">
-            <div class="feature-icon" aria-hidden="true"><i class="fas fa-sitemap"></i></div>
-            <h3>Plan — Планирование</h3>
-            <p>Формирование детального плана реализации с разбивкой на задачи, оценкой объёма работ и определением приоритетов.</p>
-          </article>
-          <article class="feature-card reveal" style="transition-delay: 0.3s">
-            <div class="feature-icon" aria-hidden="true"><i class="fas fa-code"></i></div>
-            <h3>Execute — Реализация</h3>
-            <p>Автоматическая генерация кода на основе утверждённого плана с соблюдением стандартов проекта и существующих архитектурных решений.</p>
-          </article>
-          <article class="feature-card reveal" style="transition-delay: 0.4s">
-            <div class="feature-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></div>
-            <h3>Verify — Верификация</h3>
-            <p>Автоматическое тестирование, проверка качества кода и валидация соответствия требованиям перед финальным этапом.</p>
-          </article>
-          <article class="feature-card reveal" style="transition-delay: 0.5s">
-            <div class="feature-icon" aria-hidden="true"><i class="fas fa-code-branch"></i></div>
-            <h3>Commit & MR — Коммит и создание Merge Request</h3>
-            <p>Финальный этап: автоматический коммит изменений, создание ветки и генерация готового Merge Request с полным описанием.</p>
-          </article>
+  <main>
+    <section id="features" class="section">
+      <h2>Возможности платформы</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Скорость выполнения</h3>
+          <p>Автоматизируйте рутинные задачи с ускорением до 10x. Система обрабатывает задачи в очереди с приоритизацией и распределением по ресурсам.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Аналитика проектов</h3>
+          <p>Визуализируйте прогресс всех проектов в реальном времени. Детальная статистика по каждому проекту поможет принимать обоснованные решения.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3>Управление ресурсами</h3>
+          <p>Контролируйте загрузку серверов и распределение вычислительных мощностей. Оптимизируйте затраты на инфраструктуру.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Безопасность</h3>
+          <p>Многоуровневая защита данных и шифрование при передаче. Соответствие стандартам безопасности для корпоративного использования.</p>
         </div>
       </div>
     </section>
 
-    <!-- Integration Section -->
-    <section class="integration-section" id="integration">
-      <div class="container">
-        <h2 class="section-title reveal">Интеграция</h2>
-        <p class="section-desc reveal" style="transition-delay: 0.1s">
-          AI Development Pipeline бесшовно интегрируется с вашими инструментами:
-        </p>
-        <div class="integration-logos">
-          <div class="integration-brand reveal" style="transition-delay: 0s">
-            <i class="fas fa-cube" aria-hidden="true"></i>
-            <span>Kaneo</span>
+    <section id="metrics" class="section">
+      <h2>Метрики производительности</h2>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <h3>Скорость выполнения задач</h3>
+          <div class="chart-container">
+            <svg class="bar-chart" viewBox="0 0 400 200" width="100%" height="200">
+              <rect x="40" y="140" width="30" height="60" rx="4" fill="#6C5CE7"/>
+              <rect x="90" y="120" width="30" height="80" rx="4" fill="#6C5CE7"/>
+              <rect x="140" y="100" width="30" height="100" rx="4" fill="#6C5CE7"/>
+              <rect x="190" y="80" width="30" height="120" rx="4" fill="#A29BFE"/>
+              <rect x="240" y="60" width="30" height="140" rx="4" fill="#A29BFE"/>
+              <rect x="290" y="40" width="30" height="160" rx="4" fill="#6C5CE7"/>
+              <line x1="30" y1="150" x2="370" y2="150" stroke="#ddd" stroke-width="1"/>
+              <text x="55" y="165" text-anchor="middle" font-size="10" fill="#666">Пн</text>
+              <text x="105" y="165" text-anchor="middle" font-size="10" fill="#666">Вт</text>
+              <text x="155" y="165" text-anchor="middle" font-size="10" fill="#666">Ср</text>
+              <text x="205" y="165" text-anchor="middle" font-size="10" fill="#666">Чт</text>
+              <text x="255" y="165" text-anchor="middle" font-size="10" fill="#666">Пт</text>
+              <text x="305" y="165" text-anchor="middle" font-size="10" fill="#666">Сб</text>
+            </svg>
           </div>
-          <div class="integration-brand reveal" style="transition-delay: 0.1s">
-            <i class="fab fa-gitlab" aria-hidden="true"></i>
-            <span>GitLab</span>
+          <p class="metric-desc">Среднее время выполнения: <strong>4.2 мин</strong></p>
+        </div>
+        <div class="metric-card">
+          <h3>Статистика по проектам</h3>
+          <div class="chart-container">
+            <svg class="donut-chart" viewBox="0 0 200 200" width="100%" height="200">
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#E8E8E8" stroke-width="25"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#6C5CE7" stroke-width="25" stroke-dasharray="131.95 287.28" stroke-dashoffset="0" transform="rotate(-90 100 100)"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#00CEC9" stroke-width="25" stroke-dasharray="75.4 343.83" stroke-dashoffset="-131.95" transform="rotate(-90 100 100)"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#FD79A8" stroke-width="25" stroke-dasharray="53.4 365.6" stroke-dashoffset="-207.35" transform="rotate(-90 100 100)"/>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="#FDCB6E" stroke-width="25" stroke-dasharray="37.7 381.3" stroke-dashoffset="-260.75" transform="rotate(-90 100 100)"/>
+              <text x="100" y="95" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">4</text>
+              <text x="100" y="115" text-anchor="middle" font-size="11" fill="#666">активных</text>
+            </svg>
           </div>
-          <div class="integration-brand reveal" style="transition-delay: 0.2s">
-            <i class="fab fa-github" aria-hidden="true"></i>
-            <span>GitHub</span>
+          <div class="legend">
+            <span class="legend-item"><span class="dot" style="background:#6C5CE7"></span> Разработка (46%)</span>
+            <span class="legend-item"><span class="dot" style="background:#00CEC9"></span> Тестирование (26%)</span>
+            <span class="legend-item"><span class="dot" style="background:#FD79A8"></span> Дизайн (19%)</span>
+            <span class="legend-item"><span class="dot" style="background:#FDCB6E"></span> Документация (13%)</span>
           </div>
         </div>
-        <p class="integration-note reveal" style="transition-delay: 0.3s">
-          AI Development Pipeline описывает возможности интеграции с Kaneo как трекером задач, GitLab и GitHub как платформами для управления репозиториями и создания Merge Requests.
-        </p>
-      </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section class="cases-section" id="cases">
-      <div class="container">
-        <h2 class="section-title reveal">Case Studies</h2>
-        <p class="section-desc reveal" style="transition-delay: 0.1s">
-          Примеры применения AI Development Pipeline для автоматизации разработки.
-        </p>
-        <div class="cases-grid">
-          <article class="case-card reveal" style="transition-delay: 0s">
-            <h3>Автоматизация фичевых задач</h3>
-            <p>Команда разработчиков сократила время от постановки задачи до создания MR на 70% благодаря автоматическому уточнению и генерации кода.</p>
-            <span class="case-tag">Скорость</span>
-          </article>
-          <article class="case-card reveal" style="transition-delay: 0.1s">
-            <h3>Масштабирование команды на 300%</h3>
-            <p>Благодаря AI-воркфлоу, команда смогла обрабатывать втрое больше задач без увеличения числа разработчиков, обеспечивая единое качество кода.</p>
-            <span class="case-tag">Масштабируемость</span>
-          </article>
-          <article class="case-card reveal" style="transition-delay: 0.2s">
-            <h3>Снижение количества ошибок в MR</h3>
-            <p>Верификация и автоматическое тестирование позволили сократить количество рецензий на 60%, повысив качество каждого Merge Request.</p>
-            <span class="case-tag">Качество</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-      <div class="container">
-        <h2 class="section-title reveal">Contact</h2>
-        <p class="section-desc reveal" style="transition-delay: 0.1s">
-          Свяжитесь с нами, чтобы узнать больше о возможностях AI Development Pipeline.
-        </p>
-        <div class="contact-content">
-          <div class="contact-info reveal" style="transition-delay: 0s">
-            <p>Готовы автоматизировать ваш workflow? Оставьте заявку и мы свяжемся с вами.</p>
-            <address>
-              <a href="mailto:hello@aidevpipeline.dev" class="contact-email"><i class="fas fa-envelope" aria-hidden="true"></i> hello@aidevpipeline.dev</a>
-            </address>
+        <div class="metric-card">
+          <h3>Использование ресурсов</h3>
+          <div class="chart-container">
+            <svg class="line-chart" viewBox="0 0 400 200" width="100%" height="200">
+              <defs>
+                <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#6C5CE7" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#6C5CE7" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M20 160 L80 120 L140 130 L200 80 L260 90 L320 40 L380 50 L380 200 L20 200 Z" fill="url(#areaGrad)"/>
+              <polyline points="20,160 80,120 140,130 200,80 260,90 320,40 380,50" fill="none" stroke="#6C5CE7" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="20" cy="160" r="4" fill="#6C5CE7"/>
+              <circle cx="80" cy="120" r="4" fill="#6C5CE7"/>
+              <circle cx="140" cy="130" r="4" fill="#6C5CE7"/>
+              <circle cx="200" cy="80" r="4" fill="#6C5CE7"/>
+              <circle cx="260" cy="90" r="4" fill="#6C5CE7"/>
+              <circle cx="320" cy="40" r="4" fill="#6C5CE7"/>
+              <circle cx="380" cy="50" r="4" fill="#6C5CE7"/>
+              <line x1="20" y1="180" x2="380" y2="180" stroke="#eee" stroke-width="1" stroke-dasharray="4,4"/>
+              <text x="2" y="195" font-size="10" fill="#999">Низкий</text>
+              <text x="280" y="195" font-size="10" fill="#999">Высокий</text>
+            </svg>
           </div>
-          <div class="contact-cta reveal" style="transition-delay: 0.2s">
-            <a href="#" class="cta-button secondary">Get Started</a>
-          </div>
+          <p class="metric-desc">Текущая загрузка: <strong>72%</strong> | Пик: <strong>95%</strong></p>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <div class="footer-bottom">
-      <div class="container">
-        <p class="trust-text">© 2025 AI Development Pipeline. Все права защищены.</p>
-        <div class="footer-links">
-          <a href="#" class="footer-link" aria-label="Privacy Policy">Privacy Policy</a>
-          <a href="#" class="footer-link" aria-label="Terms of Service">Terms of Service</a>
+    <section id="about" class="section">
+      <h2>О проекте COD</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p><strong>Coding Agent (COD)</strong> — это下一代 платформа для автоматизации разработки, созданная для команд, которые стремятся к максимальной продуктивности. Проект был запущен в 2024 году и уже показал значительные результаты в оптимизации рабочих процессов.</p>
+          <p>Основная миссия COD — избавиться от рутинных задач и дать разработчикам возможность сосредоточиться на творческой и стратегической работе. Платформа использует передовые алгоритмы для распределения задач, мониторинга производительности и прогнозирования узких мест.</p>
+          <div class="about-stats">
+            <div class="mini-stat">
+              <span class="mini-stat-number">3 года</span>
+              <span class="mini-stat-label">на рынке</span>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-stat-number">50+</span>
+              <span class="mini-stat-label">интеграций</span>
+            </div>
+            <div class="mini-stat">
+              <span class="mini-stat-number">24/7</span>
+              <span class="mini-stat-label">поддержка</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <svg viewBox="0 0 300 200" width="100%" height="200">
+            <rect width="300" height="200" rx="16" fill="url(#grad1)"/>
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#6C5CE7"/>
+                <stop offset="100%" style="stop-color:#00CEC9"/>
+              </linearGradient>
+            </defs>
+            <rect x="30" y="30" width="240" height="140" rx="8" fill="white" opacity="0.1"/>
+            <circle cx="80" cy="80" r="20" fill="white" opacity="0.2"/>
+            <circle cx="150" cy="100" r="25" fill="white" opacity="0.2"/>
+            <circle cx="220" cy="75" r="18" fill="white" opacity="0.2"/>
+            <rect x="60" y="130" width="180" height="6" rx="3" fill="white" opacity="0.3"/>
+            <rect x="60" y="145" width="120" height="6" rx="3" fill="white" opacity="0.3"/>
+            <text x="150" y="180" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Coding Agent Platform</text>
+          </svg>
         </div>
       </div>
+    </section>
+
+    <section id="testimonials" class="section">
+      <h2>Отзывы пользователей</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>«COD полностью изменил наш рабочий процесс. Задачи, которые занимали дни, теперь выполняются за часы. Рекомендую каждой команде разработки.»</p>
+          <cite>— Алексей Петров, TechCorp</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>«Визуализация метрик в COD — это то, чего мне не хватало в других инструментах. Теперь мы видим полную картину производительности.»</p>
+          <cite>— Мария Сидорова, DevLab</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>«Интеграция с нашими existing системами прошла безболезненно. Поддержка на высшем уровне. COD — наш надёжный партнёр.»</p>
+          <cite>— Дмитрий Козлов, DataFlow</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="cta" class="section cta-section">
+      <h2>Готовы начать?</h2>
+      <p>Присоединяйтесь к более чем 2400 команд, которые уже используют COD для автоматизации своих процессов.</p>
+      <button class="cta-button">Начать бесплатно</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+          <rect width="48" height="48" rx="12" fill="#6C5CE7"/>
+          <path d="M14 14L24 8L34 14V22L24 34L14 22V14Z" stroke="white" stroke-width="2" fill="none"/>
+          <circle cx="24" cy="21" r="3" fill="white"/>
+        </svg>
+        <span>Coding Agent</span>
+      </div>
+      <p class="footer-copy">© 2024 Coding Agent. Все права защищены.</p>
     </div>
   </footer>
-
-  <!-- Script -->
-  <script src="assets/script.js"></script>
 </body>
 </html>
