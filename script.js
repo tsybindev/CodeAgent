@@ -24,7 +24,6 @@
     burgerBtn.setAttribute('aria-expanded', 'false');
     burgerBtn.setAttribute('aria-label', 'Open menu');
     if (overlay) overlay.hidden = true;
-    // body stays overflow:hidden per spec (single screen); nothing to restore
   }
 
   if (burgerBtn && mainNav) {
@@ -54,8 +53,9 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  /* Reveal-on-load for hero elements (no scroll on single screen) */
-  var revealEls = document.querySelectorAll('.reveal, .revealPulse');
+  /* Reveal-on-load for hero elements only; stats use scroll-triggered reveal */
+  var revealEls = document.querySelectorAll('.hero .reveal, .hero .revealPulse');
+  var statRevealEls = document.querySelectorAll('.stats .stat.reveal');
   function showAll() {
     revealEls.forEach(function (el) {
       el.classList.add('visible');
@@ -65,6 +65,28 @@
   requestAnimationFrame(function () {
     requestAnimationFrame(showAll);
   });
+
+  /* Scroll-triggered reveal for stats footer sections */
+  if (reduceMotion.matches || !('IntersectionObserver' in window)) {
+    statRevealEls.forEach(function (el) {
+      el.classList.add('visible');
+    });
+  } else if (statRevealEls.length) {
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    statRevealEls.forEach(function (el) {
+      revealObserver.observe(el);
+    });
+  }
 
   /* Animated stat counters, IntersectionObserver threshold 0.25 */
   var counters = document.querySelectorAll('.count');
